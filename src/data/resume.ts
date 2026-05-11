@@ -96,6 +96,27 @@ export const projects = [
     ],
   },
   {
+    name: 'Driver Safety Monitoring & Alert System',
+    subtitle: 'Raspberry Pi + Sensors',
+    tech: ['Python', 'Raspberry Pi', 'Multithreading', 'Interrupt-driven'],
+    period: 'Mar 2026 – Present',
+    bullets: [
+      'Wrote Python scripts to evaluate sensor signal quality, stability, and responsiveness under varying conditions',
+      'Implemented interrupt-driven sensing and multithreading, reducing latency ~35% and ensuring determinism',
+      'Designed control logic to detect rapid deceleration, instability, and unsafe following distance, triggering alerts',
+    ],
+  },
+  {
+    name: 'Adaptive Cruise Control Simulation System',
+    subtitle: 'Vehicle Dynamics & Control Simulation',
+    tech: ['MATLAB', 'Python', 'Time-Series Analysis'],
+    period: 'Apr 2025 – May 2025',
+    bullets: [
+      'Processed and validated time-series sensor data to model vehicle dynamics and control behavior',
+      'Visualized time-series vehicle data in MATLAB to identify control trends and validate system performance',
+    ],
+  },
+  {
     name: 'Full-Stack Employee Management System',
     subtitle: 'REST API + CRUD Web App',
     tech: ['Node.js', 'Express', 'React', 'PostgreSQL'],
