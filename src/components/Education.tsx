@@ -24,9 +24,6 @@ export default function Education() {
 
                 <div className="flex flex-wrap gap-4 mb-5">
                   <span className="text-sm text-slate-500">
-                    GPA: <strong className="text-slate-700">{education.gpa}</strong>
-                  </span>
-                  <span className="text-sm text-slate-500">
                     Graduation: <strong className="text-slate-700">{education.graduation}</strong>
                   </span>
                 </div>

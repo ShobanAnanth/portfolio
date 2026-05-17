@@ -38,8 +38,12 @@ export default function Hero() {
           {personal.title}
         </p>
 
-        <p className="animate-fade-in-up delay-300 text-lg text-slate-500 max-w-2xl mb-10 leading-relaxed">
+        <p className="animate-fade-in-up delay-300 text-lg text-slate-500 max-w-2xl mb-4 leading-relaxed">
           {personal.tagline}
+        </p>
+
+        <p className="animate-fade-in-up delay-300 text-sm text-slate-400 max-w-2xl mb-10 leading-relaxed">
+          {personal.interests}
         </p>
 
         {/* Contact row */}

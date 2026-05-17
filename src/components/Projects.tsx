@@ -30,8 +30,12 @@ export default function Projects() {
                 <p className="text-xs text-slate-500 mb-1">{project.subtitle}</p>
                 <p className="text-xs text-blue-500 font-medium mb-4">{project.period}</p>
 
+                <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-1">
+                  {project.description}
+                </p>
+
                 {/* Tech stack */}
-                <div className="flex flex-wrap gap-1.5 mb-4">
+                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100">
                   {project.tech.map((t) => (
                     <span
                       key={t}
@@ -41,15 +45,6 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-
-                <ul className="space-y-2 flex-1">
-                  {project.bullets.map((b, j) => (
-                    <li key={j} className="flex gap-2.5 text-xs text-slate-600 leading-relaxed">
-                      <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-400 shrink-0" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}

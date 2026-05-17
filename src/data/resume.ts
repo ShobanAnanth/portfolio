@@ -5,15 +5,17 @@ export const personal = {
   email: 'shoban.ananth@outlook.com',
   linkedin: 'https://linkedin.com/in/shoban-an',
   github: 'https://github.com/shobanAnanth',
-  title: 'Computer Engineering Student @ Purdue',
-  tagline: 'Building at the intersection of embedded systems, machine learning, and full-stack engineering.',
+  title: 'Software Engineer · Computer Engineering @ Purdue',
+  tagline:
+    'Building software across every layer — full-stack products, AI-powered systems, and embedded firmware where code meets the real world.',
+  interests:
+    'Drawn to work that spans the stack: full-stack product engineering, applied ML, and embedded systems where software meets the physical world. Open to general SWE roles, with embedded a strong second.',
 };
 
 export const education = {
   school: 'Purdue University',
   location: 'West Lafayette, IN',
   degree: 'Bachelor of Science in Computer Engineering',
-  gpa: '3.69 / 4.0',
   graduation: 'Dec 2027',
   coursework: [
     'Operating Systems',
@@ -27,104 +29,86 @@ export const education = {
 export const experience = [
   {
     company: 'IBM',
-    role: 'Backend Developer Intern',
+    role: 'Software Engineer Intern',
     location: 'Poughkeepsie, NY',
     period: 'Incoming Summer 2026',
-    bullets: [],
-  },
-  {
-    company: 'Kautex Textron – Purdue Data Mine',
-    role: 'Machine Learning Engineer / Researcher',
-    location: 'West Lafayette, IN',
-    period: 'Aug 2025 – Present',
     bullets: [
-      'Engineered an end-to-end ML-powered bulk density prediction system using XGBoost across 250K+ production records to deliver real-time manufacturing insights',
-      'Built scalable backend services (Python, SQL) for data pipelines and API integration with Kautex Textron systems',
-      'Developed React dashboard serving real-time predictions to 8+ engineers, with query latency over 250K-row tables',
-      'Optimized XGBoost model via feature engineering and tuning, achieving ±5% error and improving reliability',
-      'Implemented validation pipelines to ensure model stability, data integrity, and consistent performance',
+      'Joining the Machine Learning for z/OS (MLz) team to work on backend services bringing ML capabilities to IBM Z mainframe workloads.',
     ],
   },
   {
-    company: 'Embedded Systems @ Purdue',
-    role: 'Firmware Developer',
+    company: 'Kautex Textron – Purdue Data Mine',
+    role: 'Machine Learning Engineer',
     location: 'West Lafayette, IN',
     period: 'Aug 2025 – Present',
     bullets: [
-      'Developed real-time C firmware on Zephyr RTOS (ESP32) for a HIL multi-sensor UAV simulation platform',
-      'Reduced latency by ~50% by optimizing RTOS scheduling and synchronization, improving real-time data reliability',
-      'Enabled accurate time-series data collection via interrupt-driven pipelines, ensuring deterministic sampling',
-      'Validated system timing and data integrity using logic analyzers, ensuring consistency in multithreaded systems',
+      'Shipped an end-to-end ML system predicting bulk density across 250K+ production records — now used daily by 8+ engineers to make real-time manufacturing calls.',
+      'Owned the full stack: Python data pipeline, XGBoost model tuned to ±5% error, React dashboard, and the validation suite that keeps it honest in production.',
+    ],
+  },
+  {
+    company: 'Embedded Systems @ Purdue (ES@P)',
+    role: 'Embedded Software Engineer',
+    location: 'West Lafayette, IN',
+    period: 'Aug 2025 – Present',
+    bullets: [
+      'Wrote real-time C firmware on Zephyr RTOS (ESP32) for a HIL UAV sensor platform; cut end-to-end latency ~50% by retuning RTOS scheduling and synchronization.',
+      'Validated multi-threaded timing and data integrity with logic analyzers across an interrupt-driven sampling pipeline — deterministic enough to trust downstream.',
     ],
   },
   {
     company: 'Purdue Electric Racing (PER)',
-    role: 'Embedded Software Developer',
+    role: 'Software Engineer',
     location: 'West Lafayette, IN',
     period: 'Aug 2024 – Dec 2024',
     bullets: [
-      'Integrated MCU inputs across software and hardware teams for an electric race car, cutting integration time by ~20%',
-      'Developed STM32 C firmware using GPIO and timers to interface sensors for real-time control and data collection',
-      'Reduced debugging time by ~30% by using LED diagnostics and fault codes to isolate hardware issues',
+      'Built STM32 firmware (GPIO, timers) interfacing sensors on Purdue’s electric race car; cut team integration time ~20% by bridging the software and hardware groups.',
+      'Designed an LED diagnostic + fault-code scheme that isolated hardware issues faster, reducing debug time ~30% during competition prep.',
     ],
   },
 ];
 
 export const projects = [
   {
-    name: 'Menu Finder',
-    subtitle: 'AI-Powered Restaurant Discovery App',
-    tech: ['React', 'Node.js', 'OpenAI', 'Cheerio', 'Playwright'],
-    period: 'Mar 2026 – Present',
-    bullets: [
-      'Built a full-stack restaurant app with Google Places API for real-time, location-based search and filtering',
-      'Engineered an LLM pipeline using OpenAI to convert unstructured restaurant websites into structured menu data',
-      'Implemented semantic menu search using OpenAI embeddings, enabling natural language queries across menus',
-      'Built hybrid scraping (Cheerio + Playwright) with schema validation for robust data extraction across sites',
-    ],
-  },
-  {
     name: 'RescueVision',
     subtitle: '1st Place @ StarkHacks – Sensor Fusion Track (Sponsored by ADI)',
-    tech: ['ESP32-S3', 'ARKit', 'mmWave', 'UWB', 'Neural Network'],
+    tech: ['ESP32-S3', 'ARKit', 'mmWave Radar', 'UWB', 'Neural Network', 'Sensor Fusion'],
     period: 'Apr 2026',
-    award: '🏆 1st Place',
-    bullets: [
-      'Built a real-time victim localization system for structural firefighting, fusing 60GHz mmWave radar, UWB positioning, and ARKit into a three-layer sensor pipeline enabling 3D AR victim overlay in zero-visibility conditions',
-      'Fused UWB, magnetometer, and mmWave point cloud on ESP32-S3 for real-time victim bearing and distance',
-      'Deployed a lightweight neural network on the ESP32-S3 to classify mmWave point cloud returns as conscious, unconscious, or animal targets in real time, enabling on-device rescue prioritization without cloud offloading',
-    ],
+    award: '1st Place',
+    description:
+      'A real-time victim localization system for structural firefighters that overlays victims in 3D AR through zero-visibility smoke. It fuses 60GHz mmWave radar, UWB positioning, and ARKit into a three-layer sensor pipeline running on an ESP32-S3, with an on-device neural network classifying radar returns as conscious, unconscious, or animal — prioritizing rescues without any cloud dependence. Won 1st place at StarkHacks’ Sensor Fusion track, sponsored by Analog Devices.',
   },
   {
-    name: 'Driver Safety Monitoring & Alert System',
-    subtitle: 'Raspberry Pi + Sensors',
-    tech: ['Python', 'Raspberry Pi', 'Multithreading', 'Interrupt-driven'],
+    name: 'Menu Finder',
+    subtitle: 'AI-Powered Restaurant Discovery',
+    tech: ['React', 'Node.js', 'OpenAI', 'Embeddings', 'Cheerio', 'Playwright', 'Google Places API'],
     period: 'Mar 2026 – Present',
-    bullets: [
-      'Wrote Python scripts to evaluate sensor signal quality, stability, and responsiveness under varying conditions',
-      'Implemented interrupt-driven sensing and multithreading, reducing latency ~35% and ensuring determinism',
-      'Designed control logic to detect rapid deceleration, instability, and unsafe following distance, triggering alerts',
-    ],
+    description:
+      'Full-stack app that turns the chaos of restaurant websites into a searchable menu graph. An LLM pipeline converts scraped HTML into structured menu data, and OpenAI embeddings power semantic queries like "spicy vegetarian under $15." A hybrid Cheerio + Playwright scraper with schema validation keeps the data layer resilient against the inconsistency of real-world restaurant sites.',
   },
   {
-    name: 'Adaptive Cruise Control Simulation System',
-    subtitle: 'Vehicle Dynamics & Control Simulation',
-    tech: ['MATLAB', 'Python', 'Time-Series Analysis'],
+    name: 'Driver Safety Monitoring',
+    subtitle: 'Embedded Safety System on Raspberry Pi',
+    tech: ['Python', 'Raspberry Pi', 'Multithreading', 'Interrupt-driven I/O'],
+    period: 'Mar 2026 – Present',
+    description:
+      'A Raspberry Pi safety system that detects rapid deceleration, instability, and unsafe following distance and fires driver alerts in real time. Built around interrupt-driven sensing and multithreading to give the control loop the determinism a safety-critical alert needs — cutting response latency ~35% over a polling baseline.',
+  },
+  {
+    name: 'Adaptive Cruise Control Simulation',
+    subtitle: 'Vehicle Dynamics & Control Modeling',
+    tech: ['MATLAB', 'Python', 'Time-Series Analysis', 'Control Systems'],
     period: 'Apr 2025 – May 2025',
-    bullets: [
-      'Processed and validated time-series sensor data to model vehicle dynamics and control behavior',
-      'Visualized time-series vehicle data in MATLAB to identify control trends and validate system performance',
-    ],
+    description:
+      'MATLAB and Python simulation modeling vehicle dynamics and ACC behavior from time-series sensor data. Used to validate control performance, surface tuning trends, and stress-test the logic before any of it touches real hardware.',
   },
   {
-    name: 'Full-Stack Employee Management System',
-    subtitle: 'REST API + CRUD Web App',
-    tech: ['Node.js', 'Express', 'React', 'PostgreSQL'],
+    name: 'Employee Management System',
+    subtitle: 'Full-Stack REST API + CRUD App',
+    tech: ['Node.js', 'Express', 'React', 'PostgreSQL', 'REST'],
     period: 'Jul 2025 – Aug 2025',
-    bullets: [
-      'Built management system with REST APIs and CRUD workflows using Node.js, Express, React, and PostgreSQL',
-      'Optimized database queries and backend route handling, reducing data-handling complexity by ~50%',
-    ],
+    description:
+      'End-to-end CRUD app built solo with Node/Express, React, and PostgreSQL — a deliberate exercise in clean route design and query shaping. Refactored data-handling paths cut backend complexity ~50% versus the initial implementation.',
   },
 ];
 
