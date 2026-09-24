@@ -22,9 +22,12 @@ export default function Education() {
 
                 <p className="text-slate-700 font-medium mt-1 mb-1">{education.degree}</p>
 
-                <div className="flex flex-wrap gap-4 mb-5">
+                <div className="flex flex-wrap gap-x-5 gap-y-1 mb-5">
                   <span className="text-sm text-slate-500">
-                    Graduation: <strong className="text-slate-700">{education.graduation}</strong>
+                    <strong className="text-slate-700">{education.period}</strong>
+                  </span>
+                  <span className="text-sm text-slate-500">
+                    GPA: <strong className="text-slate-700">{education.gpa}</strong>
                   </span>
                 </div>
 

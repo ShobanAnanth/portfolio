@@ -2,15 +2,17 @@ import { Code2 } from 'lucide-react';
 import { skills } from '../data/resume';
 
 const categoryColors: Record<string, string> = {
-  'Languages & Frameworks': 'bg-blue-50 text-blue-700 border-blue-100',
-  'AI / ML Tools': 'bg-violet-50 text-violet-700 border-violet-100',
-  'Systems & Tools': 'bg-emerald-50 text-emerald-700 border-emerald-100',
+  Languages: 'bg-blue-50 text-blue-700 border-blue-100',
+  Embedded: 'bg-violet-50 text-violet-700 border-violet-100',
+  'Signals & Wireless': 'bg-amber-50 text-amber-700 border-amber-100',
+  Tools: 'bg-emerald-50 text-emerald-700 border-emerald-100',
 };
 
 const headerColors: Record<string, string> = {
-  'Languages & Frameworks': 'text-blue-600',
-  'AI / ML Tools': 'text-violet-600',
-  'Systems & Tools': 'text-emerald-600',
+  Languages: 'text-blue-600',
+  Embedded: 'text-violet-600',
+  'Signals & Wireless': 'text-amber-600',
+  Tools: 'text-emerald-600',
 };
 
 export default function Skills() {
@@ -19,7 +21,7 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto">
         <SectionHeader icon={<Code2 size={20} />} title="Skills" />
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {Object.entries(skills).map(([category, items]) => (
             <div
               key={category}

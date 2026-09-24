@@ -21,7 +21,15 @@ export default function Experience() {
 
                 <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
-                    <h3 className="text-lg font-bold text-slate-900">{job.company}</h3>
+                    <h3 className="flex items-center gap-2.5 text-lg font-bold text-slate-900">
+                      {job.company}
+                      {job.current && (
+                        <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                          Current
+                        </span>
+                      )}
+                    </h3>
                     <span className="text-sm text-blue-600 font-medium whitespace-nowrap shrink-0 sm:ml-4">
                       {job.period}
                     </span>
